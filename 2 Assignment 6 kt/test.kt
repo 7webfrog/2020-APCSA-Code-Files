@@ -25,7 +25,7 @@ fun insertionSort(list:ArrayList<TeamMember>) {
   for (i in 1..list.size-1) {
     var temp:TeamMember = list.get(i)
     var pos:Int = i
-    while (pos > 0 && 0 > temp.compareTo(list.get(pos-1))) {
+    while (0 < pos && temp.compareTo(list.get(pos-1)) < 0) {
       list.set(pos, list.get(pos-1))
       pos--
     }
